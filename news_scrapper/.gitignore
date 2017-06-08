@@ -1,5 +1,5 @@
-news/
-__pycache__/_
+news/*
+__pycache__/*
 *.swp
 
 
