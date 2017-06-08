@@ -1,2 +1,7 @@
 news
-__pycache__
+__pycache_
+*.swp
+
+
+
+_
