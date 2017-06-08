@@ -1,6 +1,6 @@
 news/*
 __pycache__/*
-*.py.swp
+*.swp
 Main/__pycache__/*
 
 
