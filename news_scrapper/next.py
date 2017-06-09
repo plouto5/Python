@@ -4,8 +4,8 @@ from bs4 import BeautifulSoup
 import datetime
 from datetime import date, timedelta
 
-today = datetime.date.today()
-yesterday = datetime.date.today() - timedelta(1)
+today = datetime.datetime.today()
+yesterday = datetime.datetime.today() - timedelta(days=1,)#hours=12
 
 def make_soup(url):
     page = urllib.request.urlopen(url)
@@ -39,18 +39,14 @@ class reporter:
 for x in var_list:
 	obj = reporter( x[0], x[1], x[2])
 	obj_list.append(obj)
-
 	
-yester_day = datetime.datetime.strptime(yesterday, '%m/%d/%Y %I:%M ')
 final_articles = []
-print(type(yesterday))
-print(type(yester_day))
 
-#for i in obj_list:
-#	if i.date >= yester_day:
-#		final_articles.append(i.link)
+for i in obj_list:
+	if i.date >= yesterday:
+		final_articles.append(i.link)
 		
-#print(final_articles)
+print(len(final_articles))
 
 
 
