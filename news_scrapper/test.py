@@ -27,7 +27,7 @@ class reporter:
 
 
 for t in soup.findAll(['title', 'link', 'mlb:display-date']):
-	obj = reporter(str(t.text)[0],str(t.text)[1],datetime.datetime.strptime(str(t.text)[2], '%m/%d/%Y'))
+	obj = reporter(str(t.text)[0],str(t.text)[1],datetime.datetime.strptime(str(t.text[:-4]), '%m/%d/%Y %I:%M '))
 #	obj.title = t[0]
 #	obj.link = t[1]
 #	obj.displayDate = date(t[2], '%M/%d/%Y')

@@ -37,8 +37,9 @@ while i<len(articles):
 good_article = []
 current_day = today.strftime('%m/%d/%Y')
 yester_day = yesterday.strftime('%m/%d/%Y')
+print(var_list[1])
 
-for datetime in var_list:
-	print(datetime[2])
+#for datetime in var_list:
+#	print(datetime[1])
 
 

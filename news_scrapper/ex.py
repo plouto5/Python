@@ -14,6 +14,13 @@ def make_soup(url):
 
 soup = make_soup('http://mlb.mlb.com/partnerxml/gen/news/rss/min.xml')
 
+articles = []
+
 for i in soup.findAll('item'):
-	for t in i.findAll(['title', 'link', 'mlb:display-date']):
-		print(str(t.text)[0])
+	for t in i.findAll('mlb:display-date'):
+		print(datetime.datetime.strptime(str(t.text[:-4]), '%m/%d/%Y %I:%M '))
+
+
+
+
+
