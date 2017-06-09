@@ -1,4 +1,4 @@
-# Twins MLB News Scraper
+# MLB News Scraper
 
 Simple scrape of the news articles written within that last
 24hours of the script execution. It goes to the Teams rss.xml 
