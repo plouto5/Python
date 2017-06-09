@@ -3,6 +3,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 import datetime
 from datetime import date, timedelta
+import scrape_articles
 
 #################### Load XML ##########################
 def make_soup(url):
@@ -51,8 +52,10 @@ for i in obj_list:
 		final_articles.append(i.link)
 #########################################################
 
-
-
+for x in final_articles:
+	v = scrape_articles.make_soup(x)
+	z = scrape_articles.parse_site(v)
+	print(z)
 
 
 

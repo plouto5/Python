@@ -1,4 +1,5 @@
-import urllib.requests
+
+import urllib.request
 from bs4 import BeautifulSoup
 
 def make_soup(url):
