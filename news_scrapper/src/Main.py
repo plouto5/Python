@@ -5,16 +5,15 @@ import datetime
 from datetime import date, timedelta
 import scrape_articles
 
-#################### Load XML ##########################
+################### RSS URL ###########################
+soup = make_soup('http://mlb.mlb.com/partnerxml/gen/news/rss/min.xml')
+#######################################################
+
 def make_soup(url):
     page = urllib.request.urlopen(url)
     soupdata = BeautifulSoup(page, "xml")
     return soupdata
 
-soup = make_soup('http://mlb.mlb.com/partnerxml/gen/news/rss/min.xml')
-########################################################
-
-#################### Link Scrub ########################
 final_articles = []
 articles = []
 obj_list = []
