@@ -9,13 +9,23 @@ def make_soup(url):
 
 def parse_site(data):
     for title in data.find_all('title'):
-        print(title.text)
-    for author in data.find_all('span', 'author'):
-        print(author.text+ "\n")
-    for paragraph in data.find_all('p'):
-        print(paragraph.text)
+		return(title.text)
+	for author in data.find_all('span', 'author'):
+		return(author.text+ "\n")
+   	for paragraph in data.find_all('p'):
+   		return(paragraph.text)
 
-
+#def parse_author(data):
+#	for author in data.find_all('span', 'author'):
+#		return(author.text+ "\n")
+#
+#def parse_paragraph(data):
+#	for paragraph in data.find_all('p'):
+#		return(paragraph.text)
+#
+#def parse_title(data):
+#	for title in data.find_all('title'):
+#		return(title.text)
 
 
 

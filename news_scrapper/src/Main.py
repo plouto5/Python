@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import datetime
 from datetime import date, timedelta
 import scrape_articles
+import os
 
 ################### RSS URL ###########################
 url = 'http://mlb.mlb.com/partnerxml/gen/news/rss/min.xml'
@@ -22,7 +23,7 @@ obj_list = []
 
 today = datetime.datetime.today()
 yesterday = datetime.datetime.today() - timedelta(days=1,)#hours=12
-
+mail = os.path.join('/home', 'cane', 'Email', 'news.txt')
 
 class reporter:
 
@@ -55,8 +56,11 @@ for i in obj_list:
 ################### Output to File ######################
 for x in final_articles:
 	v = scrape_articles.make_soup(x)
-	z = scrape_articles.parse_site(v)
-	print(z)
+	z = scrape_articles.parse_site(v)	
+	m = open(mail, 'w')
+	m.write(z)
+
+m.close()
 
 
 
