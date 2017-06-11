@@ -52,20 +52,21 @@ for x in var_list:
 for i in obj_list:
 	if i.date >= yesterday:
 		final_articles.append(i.link)
+
+
 #########################################################
 ################### Output to File ######################
-for x in final_articles:
-	v = scrape_articles.make_soup(x)
-	z = scrape_articles.parse_site(v)	
-	m = open(mail, 'w')
-	m.write(z)
-
+m = open(mail, 'w')
+m.write('Todays date is :'+str(today)+'\n')
 m.close()
 
+email = open(mail, 'a')
 
-
-
-
+for x in final_articles:
+	v = scrape_articles.make_soup(x)
+	scrape_articles.parse_site(v,email)	
+	
+email.close()
 
 
 
