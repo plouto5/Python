@@ -1,5 +1,5 @@
 #news/*
-__pycache__/*
+__pycache__
 *.swp
 src/__pycache__/
 *.pyc
