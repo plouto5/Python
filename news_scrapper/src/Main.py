@@ -8,6 +8,8 @@ import os
 
 ################### RSS URL ###########################
 url = 'http://mlb.mlb.com/partnerxml/gen/news/rss/min.xml'
+################### Desired File Path #################
+mail = os.path.join('/Folder1', 'Folder2', 'etc', 'news.txt')
 #######################################################
 
 def make_soup(url):
@@ -23,7 +25,6 @@ obj_list = []
 
 today = datetime.datetime.today()
 yesterday = datetime.datetime.today() - timedelta(days=1,)#hours=12
-mail = os.path.join('/home', 'cane', 'Email', 'news.txt')
 
 class reporter:
 
