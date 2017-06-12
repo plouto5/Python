@@ -3,5 +3,5 @@ These are my python scripts. Just a normal guy looking to learn things. Feel fre
 
 # List
 
-/news_scraper/ * MLB news scraper for a teams rss url. Only takes the articles within the last 24 hours.
+`/news_scraper/` - MLB news scraper for a teams rss url. Only takes the articles within the last 24 hours.
 
